@@ -1,12 +1,5 @@
 pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
 openpyxl
-ipykernel
-pypdf
 streamlit
 plotly
 statsmodels
-watchdog
