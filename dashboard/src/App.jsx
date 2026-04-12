@@ -47,6 +47,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFighter, setSelectedFighter] = useState(task13[0]);
   const [explorerSort, setExplorerSort] = useState('activity');
+  const [isCalculating, setIsCalculating] = useState(false);
   
   // Predictor State
   const [predictMode, setPredictMode] = useState('name'); // 'name' or 'attributes'
@@ -78,6 +79,13 @@ const App = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Trigger calculation animation
+  useEffect(() => {
+    setIsCalculating(true);
+    const timer = setTimeout(() => setIsCalculating(false), 1000);
+    return () => clearTimeout(timer);
+  }, [p1, p2, attr, predictMode]);
 
   const calculateProb = () => {
      let p1Score = 50;
@@ -262,15 +270,15 @@ const App = () => {
            
            <div className="chart-grid">
               {/* Predictor */}
-              <div className={`card ${prob !== 50 ? 'heartbeat-subtle' : ''}`} style={{gridColumn: 'span 7', padding: '2rem', position: 'relative', overflow: 'hidden'}}>
+              <div className="card" style={{gridColumn: 'span 7', padding: '2rem', position: 'relative', overflow: 'hidden'}}>
                  
-                 {/* Ongoing Fight Scanner Effect */}
-                 <div className="ongoing-fight-scanner" style={{ '--active-color': prob > 50 ? 'var(--accent-red)' : '#0a5cd2' }} />
+                 {/* Ongoing Fight Scanner Effect - ONLY WHEN CALCULATING */}
+                 {isCalculating && <div className="ongoing-fight-scanner" style={{ '--active-color': prob > 50 ? 'var(--accent-red)' : '#0a5cd2' }} />}
 
                  <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom: '2rem', position: 'relative', zIndex: 10}}>
                     <h3 className="chart-title" style={{display:'flex', alignItems:'center', gap:'0.5rem'}}>
                        <BrainCircuit size={20} /> Winner Predictor 
-                       {prob !== 50 && <Activity size={16} className="heartbeat" color={prob > 50 ? 'var(--accent-red)' : '#0a5cd2'} />}
+                       {isCalculating && <Activity size={16} className="heartbeat" color={prob > 50 ? 'var(--accent-red)' : '#0a5cd2'} />}
                     </h3>
                     <div className="toggle-group">
                        <button onClick={() => setPredictMode('name')} className={predictMode === 'name' ? 'active' : ''}>Jména</button>
