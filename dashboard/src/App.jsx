@@ -60,9 +60,10 @@ const App = () => {
 
   const chapters = [
     { id: 'hero', label: 'Start', title: 'Vítejte' },
-    { id: 'intro', label: 'Kapitola 1', title: 'Historický dosah' },
-    { id: 'weight', label: 'Kapitola 2', title: 'Bojiště vah' },
-    { id: 'lethality', label: 'Kapitola 3', title: 'Trend brutality' },
+    { id: 'cities', label: 'Kapitola 1', title: 'Města pod palbou' },
+    { id: 'intro', label: 'Kapitola 2', title: 'Historický dosah' },
+    { id: 'weight', label: 'Kapitola 3', title: 'Bojiště vah' },
+    { id: 'lethality', label: 'Kapitola 4', title: 'Trend brutality' },
     { id: 'advantage', label: 'Kapitola 4', title: 'Klíč k vítězství' },
     { id: 'referees', label: 'Kapitola 5', title: 'Vliv rozhodčích' },
     { id: 'geography', label: 'Kapitola 6', title: 'Dobytí světa' },
@@ -175,6 +176,17 @@ const App = () => {
           <div className="metric-item"><span className="metric-value">{task1.total_events}</span><span className="metric-label">Eventů</span></div>
           <div className="metric-item"><span className="metric-value">{task1.oldest_fighter_age}</span><span className="metric-label">Věk nejstaršího</span></div>
         </div>
+      </Chapter>
+
+      <Chapter id="cities" label="Kapitola 2" question="Která města jsou domovem UFC?" insight={<p>Las Vegas je nezpochybnitelným králem se <strong>{task_cities[0].value}</strong> eventy. UFC se ale stalo globálním fenoménem, který pravidelně vyprodává arény v Abu Dhabi, Londýně i Rio de Janeiru.</p>}>
+        <ResponsiveContainer width="100%" height={450}>
+          <BarChart data={task_cities} layout="vertical" margin={{ left: 30, right: 30 }}>
+            <XAxis type="number" hide />
+            <YAxis dataKey="name" type="category" width={140} tick={{ fill: '#8e8e93', fontSize: 11 }} interval={0} />
+            <Tooltip contentStyle={{ background: '#111', border: '1px solid #333' }} />
+            <Bar dataKey="value" fill="var(--accent-red)" radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
       </Chapter>
 
       <Chapter id="weight" label="Kapitola 2" question="Ve kterých vahách se píše historie?" insight={<p>Dominance lehké a velterové váhy není náhodná – tyto divize nabízejí nejširší pool talentů a největší frekvenci zápasů.</p>}>

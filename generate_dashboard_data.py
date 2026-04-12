@@ -114,7 +114,11 @@ def generate_data():
             if is_winner: exp_wins[f_num][0] += 1
     task9 = [{"fight_num": f_num, "win_rate": round((wins/total)*100, 1)} for f_num, (wins, total) in sorted(exp_wins.items()) if total >= 20]
 
-    # --- FINAL DATA AGGREGATION ---
+    
+    # --- TASK CITIES: EVENTS PER CITY ---
+    df_merged = df_fights.merge(df_loc, on='location_id')
+    task_cities = df_merged.groupby('city')['date'].nunique().sort_values(ascending=False).head(15).reset_index().rename(columns={'city': 'name', 'date': 'value'}).to_dict(orient='records')
+# --- FINAL DATA AGGREGATION ---
     final_data = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "task1": { "unique_fighters": int(unique_fighters), "total_events": int(events_count), "oldest_fighter_age": round(max(df_fights['r_age'].max(), df_fights['b_age'].max()), 1), "top_city": df_loc[df_loc['location_id'] == df_fights['location_id'].value_counts().idxmax()]['city'].values[0] },
@@ -127,7 +131,7 @@ def generate_data():
         "task8": df_fights.groupby('year').agg({'is_ko': 'mean', 'format_rounds': 'mean'}).assign(ko_pct=lambda x: round(x['is_ko']*100, 1), avg_rounds=lambda x: round(x['format_rounds'], 2)).reset_index()[['year', 'ko_pct', 'avg_rounds']].to_dict(orient='records'),
         "task9": task9,
         "task10": pd.cut(pd.Series([int(r['r_age']) if r['winner'] == 'Red' else int(r['b_age']) for _, r in df_fights.dropna(subset=['r_age', 'b_age']).iterrows()]), bins=[0, 24, 29, 34, 100], labels=['18-24', '25-29', '30-34', '35+']).value_counts().sort_index().reset_index().rename(columns={'count': 'wins', 'index': 'group'}).to_dict(orient='records'),
-        "task11": task11, "task12": task12, "task13": task13,
+        "task_cities": task_cities, "task11": task11, "task12": task12, "task13": task13,
         "task14": {"red_corner": 15, "height_inch": 1.5, "age_prime": 5}
     }
     
