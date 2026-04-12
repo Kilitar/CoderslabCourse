@@ -128,19 +128,23 @@ const App = () => {
       {/* HERO SECTION */}
       <section id="hero" className="hero-section">
         <div className="hero-overlay" />
+        
+        {/* LOGO VISÍCÍ ZE STROPU */}
+        <motion.img 
+            initial={{ y: -100, opacity: 0 }} 
+            animate={{ y: 0, opacity: 1 }} 
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            src="/logo.png" 
+            alt="UFC Logo" 
+            className="hero-logo" 
+        />
+
+        {/* NÁPIS UPROSTŘED ARÉNY */}
         <div className="hero-content">
-          <motion.img 
-              initial={{ scale: 0.8, opacity: 0 }} 
-              animate={{ scale: 1, opacity: 1 }} 
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              src="/logo.png" 
-              alt="UFC Logo" 
-              className="hero-logo" 
-          />
           <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ delay: 0.8, duration: 1 }}
+            initial={{ opacity: 0, scale: 0.9 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            transition={{ delay: 1, duration: 1.2 }}
           >
             <h1 className="hero-title">UMĚNÍ DAT V OKTAGONU</h1>
             <p className="hero-subtitle">Komplexní analýza historie, trendů a úspěchu v UFC</p>

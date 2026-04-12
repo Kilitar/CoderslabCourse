@@ -60,13 +60,15 @@ body {
 }
 
 .hero-logo {
-  width: 160px;
+  width: 140px;
   position: absolute;
-  top: 10vh;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
   filter: drop-shadow(0 0 20px var(--accent-red-glow));
   animation: float 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
 @keyframes float {
