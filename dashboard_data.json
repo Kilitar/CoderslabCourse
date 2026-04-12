@@ -1,0 +1,1427 @@
+{
+    "last_updated": "2026-04-12 12:40",
+    "task1": {
+        "unique_fighters": 2122,
+        "total_events": 555,
+        "oldest_fighter_age": 51.9,
+        "top_city": "Las Vegas"
+    },
+    "task2": [
+        {
+            "name": "Lightweight",
+            "value": 1056
+        },
+        {
+            "name": "Welterweight",
+            "value": 1050
+        },
+        {
+            "name": "Middleweight",
+            "value": 791
+        },
+        {
+            "name": "Bantamweight",
+            "value": 591
+        },
+        {
+            "name": "Heavyweight",
+            "value": 557
+        },
+        {
+            "name": "Featherweight",
+            "value": 543
+        },
+        {
+            "name": "Light Heavyweight",
+            "value": 507
+        },
+        {
+            "name": "Flyweight",
+            "value": 331
+        },
+        {
+            "name": "Strawweight",
+            "value": 178
+        },
+        {
+            "name": "Openweight",
+            "value": 86
+        },
+        {
+            "name": "Catchweight",
+            "value": 38
+        },
+        {
+            "name": "Superheavyweight",
+            "value": 1
+        }
+    ],
+    "task3": {
+        "distribution": [
+            {
+                "name": "Decision",
+                "value": 2628
+            },
+            {
+                "name": "KO/TKO",
+                "value": 1923
+            },
+            {
+                "name": "Submission",
+                "value": 1160
+            },
+            {
+                "name": "Other",
+                "value": 18
+            }
+        ],
+        "ko_tko_percentage": 33.57
+    },
+    "task4": [
+        {
+            "name": "Donald Cerrone",
+            "wins": 23
+        },
+        {
+            "name": "Demian Maia",
+            "wins": 22
+        },
+        {
+            "name": "Jim Miller",
+            "wins": 21
+        },
+        {
+            "name": "Georges St-Pierre",
+            "wins": 19
+        },
+        {
+            "name": "Michael Bisping",
+            "wins": 19
+        },
+        {
+            "name": "Rafael Dos Anjos",
+            "wins": 19
+        },
+        {
+            "name": "Charles Oliveira",
+            "wins": 18
+        },
+        {
+            "name": "Diego Sanchez",
+            "wins": 18
+        },
+        {
+            "name": "Dustin Poirier",
+            "wins": 18
+        },
+        {
+            "name": "Frankie Edgar",
+            "wins": 18
+        }
+    ],
+    "task5": [
+        {
+            "name": "Derrick Lewis",
+            "kos": 12
+        },
+        {
+            "name": "Anderson Silva",
+            "kos": 11
+        },
+        {
+            "name": "Anthony Johnson",
+            "kos": 11
+        },
+        {
+            "name": "Matt Brown",
+            "kos": 11
+        },
+        {
+            "name": "Thiago Santos",
+            "kos": 11
+        },
+        {
+            "name": "Vitor Belfort",
+            "kos": 11
+        },
+        {
+            "name": "Cain Velasquez",
+            "kos": 10
+        },
+        {
+            "name": "Donald Cerrone",
+            "kos": 10
+        },
+        {
+            "name": "Junior Dos Santos",
+            "kos": 10
+        },
+        {
+            "name": "Alistair Overeem",
+            "kos": 9
+        }
+    ],
+    "task6": {
+        "Red": 67.0,
+        "Blue": 33.0
+    },
+    "task7": {
+        "height_advantage": 52.1,
+        "weight_advantage": 49.8
+    },
+    "task8": [
+        {
+            "year": 1994,
+            "ko_pct": 30.8,
+            "avg_rounds": 0.0
+        },
+        {
+            "year": 1995,
+            "ko_pct": 37.0,
+            "avg_rounds": 1.0
+        },
+        {
+            "year": 1996,
+            "ko_pct": 67.7,
+            "avg_rounds": 1.0
+        },
+        {
+            "year": 1997,
+            "ko_pct": 35.5,
+            "avg_rounds": 1.0
+        },
+        {
+            "year": 1998,
+            "ko_pct": 37.5,
+            "avg_rounds": 1.0
+        },
+        {
+            "year": 1999,
+            "ko_pct": 62.5,
+            "avg_rounds": 2.0
+        },
+        {
+            "year": 2000,
+            "ko_pct": 35.0,
+            "avg_rounds": 2.98
+        },
+        {
+            "year": 2001,
+            "ko_pct": 41.7,
+            "avg_rounds": 3.33
+        },
+        {
+            "year": 2002,
+            "ko_pct": 54.9,
+            "avg_rounds": 3.31
+        },
+        {
+            "year": 2003,
+            "ko_pct": 45.9,
+            "avg_rounds": 3.22
+        },
+        {
+            "year": 2004,
+            "ko_pct": 43.2,
+            "avg_rounds": 3.16
+        },
+        {
+            "year": 2005,
+            "ko_pct": 49.3,
+            "avg_rounds": 3.14
+        },
+        {
+            "year": 2006,
+            "ko_pct": 36.4,
+            "avg_rounds": 3.11
+        },
+        {
+            "year": 2007,
+            "ko_pct": 31.7,
+            "avg_rounds": 3.07
+        },
+        {
+            "year": 2008,
+            "ko_pct": 42.8,
+            "avg_rounds": 3.07
+        },
+        {
+            "year": 2009,
+            "ko_pct": 35.1,
+            "avg_rounds": 3.06
+        },
+        {
+            "year": 2010,
+            "ko_pct": 27.2,
+            "avg_rounds": 3.07
+        },
+        {
+            "year": 2011,
+            "ko_pct": 31.8,
+            "avg_rounds": 3.09
+        },
+        {
+            "year": 2012,
+            "ko_pct": 32.5,
+            "avg_rounds": 3.14
+        },
+        {
+            "year": 2013,
+            "ko_pct": 34.7,
+            "avg_rounds": 3.14
+        },
+        {
+            "year": 2014,
+            "ko_pct": 30.4,
+            "avg_rounds": 3.18
+        },
+        {
+            "year": 2015,
+            "ko_pct": 33.4,
+            "avg_rounds": 3.15
+        },
+        {
+            "year": 2016,
+            "ko_pct": 31.9,
+            "avg_rounds": 3.16
+        },
+        {
+            "year": 2017,
+            "ko_pct": 33.2,
+            "avg_rounds": 3.15
+        },
+        {
+            "year": 2018,
+            "ko_pct": 32.1,
+            "avg_rounds": 3.16
+        },
+        {
+            "year": 2019,
+            "ko_pct": 29.9,
+            "avg_rounds": 3.14
+        },
+        {
+            "year": 2020,
+            "ko_pct": 31.1,
+            "avg_rounds": 3.18
+        },
+        {
+            "year": 2021,
+            "ko_pct": 35.1,
+            "avg_rounds": 3.16
+        }
+    ],
+    "task9": [
+        {
+            "fight_num": 1,
+            "win_rate": 44.5
+        },
+        {
+            "fight_num": 2,
+            "win_rate": 51.1
+        },
+        {
+            "fight_num": 3,
+            "win_rate": 49.7
+        },
+        {
+            "fight_num": 4,
+            "win_rate": 51.1
+        },
+        {
+            "fight_num": 5,
+            "win_rate": 51.9
+        },
+        {
+            "fight_num": 6,
+            "win_rate": 52.0
+        },
+        {
+            "fight_num": 7,
+            "win_rate": 53.1
+        },
+        {
+            "fight_num": 8,
+            "win_rate": 52.4
+        },
+        {
+            "fight_num": 9,
+            "win_rate": 50.5
+        },
+        {
+            "fight_num": 10,
+            "win_rate": 58.4
+        },
+        {
+            "fight_num": 11,
+            "win_rate": 51.5
+        },
+        {
+            "fight_num": 12,
+            "win_rate": 53.5
+        },
+        {
+            "fight_num": 13,
+            "win_rate": 53.5
+        },
+        {
+            "fight_num": 14,
+            "win_rate": 49.7
+        },
+        {
+            "fight_num": 15,
+            "win_rate": 51.0
+        },
+        {
+            "fight_num": 16,
+            "win_rate": 52.5
+        },
+        {
+            "fight_num": 17,
+            "win_rate": 50.0
+        },
+        {
+            "fight_num": 18,
+            "win_rate": 45.8
+        },
+        {
+            "fight_num": 19,
+            "win_rate": 43.2
+        },
+        {
+            "fight_num": 20,
+            "win_rate": 43.3
+        },
+        {
+            "fight_num": 21,
+            "win_rate": 41.2
+        },
+        {
+            "fight_num": 22,
+            "win_rate": 57.1
+        },
+        {
+            "fight_num": 23,
+            "win_rate": 48.5
+        },
+        {
+            "fight_num": 24,
+            "win_rate": 37.0
+        }
+    ],
+    "task10": [
+        {
+            "group": "18-24",
+            "wins": 691
+        },
+        {
+            "group": "25-29",
+            "wins": 2451
+        },
+        {
+            "group": "30-34",
+            "wins": 1955
+        },
+        {
+            "group": "35+",
+            "wins": 534
+        }
+    ],
+    "task11": [
+        {
+            "referee": "Neil Swailes",
+            "matches": 15,
+            "ko_rate": 0.4666666666666667,
+            "ko_pct": 46.7
+        },
+        {
+            "referee": "Larry Landless",
+            "matches": 37,
+            "ko_rate": 0.43243243243243246,
+            "ko_pct": 43.2
+        },
+        {
+            "referee": "Rob Hinds",
+            "matches": 24,
+            "ko_rate": 0.4166666666666667,
+            "ko_pct": 41.7
+        },
+        {
+            "referee": "John McCarthy",
+            "matches": 559,
+            "ko_rate": 0.40429338103756707,
+            "ko_pct": 40.4
+        },
+        {
+            "referee": "Gasper Oliver",
+            "matches": 15,
+            "ko_rate": 0.4,
+            "ko_pct": 40.0
+        },
+        {
+            "referee": "Dan Miragliotta",
+            "matches": 389,
+            "ko_rate": 0.39331619537275064,
+            "ko_pct": 39.3
+        },
+        {
+            "referee": "Herb Dean",
+            "matches": 802,
+            "ko_rate": 0.36658354114713215,
+            "ko_pct": 36.7
+        },
+        {
+            "referee": "Jason Herzog",
+            "matches": 172,
+            "ko_rate": 0.36046511627906974,
+            "ko_pct": 36.0
+        },
+        {
+            "referee": "Fernando Yamasaki",
+            "matches": 17,
+            "ko_rate": 0.35294117647058826,
+            "ko_pct": 35.3
+        },
+        {
+            "referee": "Steve Mazzagatti",
+            "matches": 190,
+            "ko_rate": 0.3526315789473684,
+            "ko_pct": 35.3
+        }
+    ],
+    "task12": {
+        "timeline": [
+            {
+                "year": 1994,
+                "countries": 1
+            },
+            {
+                "year": 1995,
+                "countries": 1
+            },
+            {
+                "year": 1996,
+                "countries": 2
+            },
+            {
+                "year": 1997,
+                "countries": 3
+            },
+            {
+                "year": 1998,
+                "countries": 4
+            },
+            {
+                "year": 1999,
+                "countries": 4
+            },
+            {
+                "year": 2000,
+                "countries": 4
+            },
+            {
+                "year": 2001,
+                "countries": 4
+            },
+            {
+                "year": 2002,
+                "countries": 5
+            },
+            {
+                "year": 2003,
+                "countries": 5
+            },
+            {
+                "year": 2004,
+                "countries": 5
+            },
+            {
+                "year": 2005,
+                "countries": 5
+            },
+            {
+                "year": 2006,
+                "countries": 5
+            },
+            {
+                "year": 2007,
+                "countries": 5
+            },
+            {
+                "year": 2008,
+                "countries": 6
+            },
+            {
+                "year": 2009,
+                "countries": 8
+            },
+            {
+                "year": 2010,
+                "countries": 10
+            },
+            {
+                "year": 2011,
+                "countries": 10
+            },
+            {
+                "year": 2012,
+                "countries": 12
+            },
+            {
+                "year": 2013,
+                "countries": 12
+            },
+            {
+                "year": 2014,
+                "countries": 15
+            },
+            {
+                "year": 2015,
+                "countries": 18
+            },
+            {
+                "year": 2016,
+                "countries": 20
+            },
+            {
+                "year": 2017,
+                "countries": 20
+            },
+            {
+                "year": 2018,
+                "countries": 23
+            },
+            {
+                "year": 2019,
+                "countries": 26
+            },
+            {
+                "year": 2020,
+                "countries": 26
+            },
+            {
+                "year": 2021,
+                "countries": 26
+            }
+        ],
+        "top_countries": {
+            " USA": 3745,
+            " Brazil": 409,
+            " Canada": 350,
+            " United Kingdom": 249,
+            " United Arab Emirates": 169,
+            " Australia": 163,
+            " Japan": 74,
+            " Sweden": 72,
+            " Mexico": 65,
+            " Germany": 65
+        }
+    },
+    "task13": [
+        {
+            "name": "Donald Cerrone",
+            "wins": 23,
+            "losses": 12,
+            "ko_wins": 10,
+            "h_total": 73,
+            "win_rate": 65.7
+        },
+        {
+            "name": "Jim Miller",
+            "wins": 21,
+            "losses": 14,
+            "ko_wins": 3,
+            "h_total": 68,
+            "win_rate": 60.0
+        },
+        {
+            "name": "Jeremy Stephens",
+            "wins": 15,
+            "losses": 18,
+            "ko_wins": 8,
+            "h_total": 69,
+            "win_rate": 45.5
+        },
+        {
+            "name": "Demian Maia",
+            "wins": 22,
+            "losses": 10,
+            "ko_wins": 1,
+            "h_total": 73,
+            "win_rate": 68.8
+        },
+        {
+            "name": "Andrei Arlovski",
+            "wins": 17,
+            "losses": 14,
+            "ko_wins": 8,
+            "h_total": 75,
+            "win_rate": 54.8
+        },
+        {
+            "name": "Diego Sanchez",
+            "wins": 18,
+            "losses": 13,
+            "ko_wins": 5,
+            "h_total": 70,
+            "win_rate": 58.1
+        },
+        {
+            "name": "Clay Guida",
+            "wins": 16,
+            "losses": 14,
+            "ko_wins": 2,
+            "h_total": 67,
+            "win_rate": 53.3
+        },
+        {
+            "name": "Rafael Dos Anjos",
+            "wins": 19,
+            "losses": 10,
+            "ko_wins": 4,
+            "h_total": 68,
+            "win_rate": 65.5
+        },
+        {
+            "name": "Gleison Tibau",
+            "wins": 16,
+            "losses": 12,
+            "ko_wins": 1,
+            "h_total": 70,
+            "win_rate": 57.1
+        },
+        {
+            "name": "Michael Bisping",
+            "wins": 19,
+            "losses": 9,
+            "ko_wins": 9,
+            "h_total": 73,
+            "win_rate": 67.9
+        },
+        {
+            "name": "Matt Brown",
+            "wins": 15,
+            "losses": 12,
+            "ko_wins": 11,
+            "h_total": 72,
+            "win_rate": 55.6
+        },
+        {
+            "name": "Joe Lauzon",
+            "wins": 15,
+            "losses": 12,
+            "ko_wins": 6,
+            "h_total": 70,
+            "win_rate": 55.6
+        },
+        {
+            "name": "Thiago Alves",
+            "wins": 15,
+            "losses": 12,
+            "ko_wins": 8,
+            "h_total": 69,
+            "win_rate": 55.6
+        },
+        {
+            "name": "BJ Penn",
+            "wins": 12,
+            "losses": 14,
+            "ko_wins": 7,
+            "h_total": 69,
+            "win_rate": 46.2
+        },
+        {
+            "name": "Frankie Edgar",
+            "wins": 18,
+            "losses": 8,
+            "ko_wins": 5,
+            "h_total": 66,
+            "win_rate": 69.2
+        },
+        {
+            "name": "Charles Oliveira",
+            "wins": 18,
+            "losses": 8,
+            "ko_wins": 2,
+            "h_total": 70,
+            "win_rate": 69.2
+        },
+        {
+            "name": "Frank Mir",
+            "wins": 15,
+            "losses": 10,
+            "ko_wins": 4,
+            "h_total": 75,
+            "win_rate": 60.0
+        },
+        {
+            "name": "Josh Koscheck",
+            "wins": 15,
+            "losses": 10,
+            "ko_wins": 6,
+            "h_total": 70,
+            "win_rate": 60.0
+        },
+        {
+            "name": "Nate Marquardt",
+            "wins": 13,
+            "losses": 12,
+            "ko_wins": 6,
+            "h_total": 72,
+            "win_rate": 52.0
+        },
+        {
+            "name": "Matt Hughes",
+            "wins": 18,
+            "losses": 6,
+            "ko_wins": 8,
+            "h_total": 69,
+            "win_rate": 75.0
+        },
+        {
+            "name": "Tim Boetsch",
+            "wins": 12,
+            "losses": 12,
+            "ko_wins": 7,
+            "h_total": 72,
+            "win_rate": 50.0
+        },
+        {
+            "name": "Ross Pearson",
+            "wins": 11,
+            "losses": 13,
+            "ko_wins": 5,
+            "h_total": 68,
+            "win_rate": 45.8
+        },
+        {
+            "name": "Nate Diaz",
+            "wins": 14,
+            "losses": 10,
+            "ko_wins": 2,
+            "h_total": 72,
+            "win_rate": 58.3
+        },
+        {
+            "name": "Neil Magny",
+            "wins": 17,
+            "losses": 7,
+            "ko_wins": 5,
+            "h_total": 75,
+            "win_rate": 70.8
+        },
+        {
+            "name": "Stefan Struve",
+            "wins": 13,
+            "losses": 11,
+            "ko_wins": 5,
+            "h_total": 83,
+            "win_rate": 54.2
+        },
+        {
+            "name": "Anderson Silva",
+            "wins": 17,
+            "losses": 7,
+            "ko_wins": 11,
+            "h_total": 74,
+            "win_rate": 70.8
+        },
+        {
+            "name": "Edson Barboza",
+            "wins": 15,
+            "losses": 9,
+            "ko_wins": 7,
+            "h_total": 71,
+            "win_rate": 62.5
+        },
+        {
+            "name": "Darren Elkins",
+            "wins": 15,
+            "losses": 8,
+            "ko_wins": 3,
+            "h_total": 70,
+            "win_rate": 65.2
+        },
+        {
+            "name": "Alex Caceres",
+            "wins": 13,
+            "losses": 10,
+            "ko_wins": 1,
+            "h_total": 70,
+            "win_rate": 56.5
+        },
+        {
+            "name": "Dustin Poirier",
+            "wins": 18,
+            "losses": 5,
+            "ko_wins": 9,
+            "h_total": 69,
+            "win_rate": 78.3
+        },
+        {
+            "name": "Nik Lentz",
+            "wins": 14,
+            "losses": 9,
+            "ko_wins": 3,
+            "h_total": 68,
+            "win_rate": 60.9
+        },
+        {
+            "name": "Michael Johnson",
+            "wins": 11,
+            "losses": 12,
+            "ko_wins": 4,
+            "h_total": 70,
+            "win_rate": 47.8
+        },
+        {
+            "name": "Junior Dos Santos",
+            "wins": 15,
+            "losses": 8,
+            "ko_wins": 10,
+            "h_total": 76,
+            "win_rate": 65.2
+        },
+        {
+            "name": "Gabriel Gonzaga",
+            "wins": 12,
+            "losses": 10,
+            "ko_wins": 7,
+            "h_total": 74,
+            "win_rate": 54.5
+        },
+        {
+            "name": "Chris Leben",
+            "wins": 12,
+            "losses": 10,
+            "ko_wins": 7,
+            "h_total": 71,
+            "win_rate": 54.5
+        },
+        {
+            "name": "Francisco Trinaldo",
+            "wins": 16,
+            "losses": 6,
+            "ko_wins": 5,
+            "h_total": 69,
+            "win_rate": 72.7
+        },
+        {
+            "name": "Robbie Lawler",
+            "wins": 13,
+            "losses": 9,
+            "ko_wins": 6,
+            "h_total": 71,
+            "win_rate": 59.1
+        },
+        {
+            "name": "Tim Means",
+            "wins": 13,
+            "losses": 9,
+            "ko_wins": 5,
+            "h_total": 74,
+            "win_rate": 59.1
+        },
+        {
+            "name": "Ed Herman",
+            "wins": 13,
+            "losses": 9,
+            "ko_wins": 4,
+            "h_total": 73,
+            "win_rate": 59.1
+        },
+        {
+            "name": "Max Holloway",
+            "wins": 17,
+            "losses": 5,
+            "ko_wins": 8,
+            "h_total": 71,
+            "win_rate": 77.3
+        },
+        {
+            "name": "Vitor Belfort",
+            "wins": 14,
+            "losses": 8,
+            "ko_wins": 11,
+            "h_total": 72,
+            "win_rate": 63.6
+        },
+        {
+            "name": "Ovince Saint Preux",
+            "wins": 13,
+            "losses": 9,
+            "ko_wins": 6,
+            "h_total": 75,
+            "win_rate": 59.1
+        },
+        {
+            "name": "Derek Brunson",
+            "wins": 16,
+            "losses": 5,
+            "ko_wins": 8,
+            "h_total": 73,
+            "win_rate": 76.2
+        },
+        {
+            "name": "Melvin Guillard",
+            "wins": 12,
+            "losses": 9,
+            "ko_wins": 8,
+            "h_total": 69,
+            "win_rate": 57.1
+        },
+        {
+            "name": "Thales Leites",
+            "wins": 13,
+            "losses": 8,
+            "ko_wins": 2,
+            "h_total": 73,
+            "win_rate": 61.9
+        },
+        {
+            "name": "Georges St-Pierre",
+            "wins": 19,
+            "losses": 2,
+            "ko_wins": 5,
+            "h_total": 71,
+            "win_rate": 90.5
+        },
+        {
+            "name": "Johny Hendricks",
+            "wins": 13,
+            "losses": 8,
+            "ko_wins": 5,
+            "h_total": 69,
+            "win_rate": 61.9
+        },
+        {
+            "name": "Jake Ellenberger",
+            "wins": 10,
+            "losses": 11,
+            "ko_wins": 6,
+            "h_total": 69,
+            "win_rate": 47.6
+        },
+        {
+            "name": "Derrick Lewis",
+            "wins": 16,
+            "losses": 5,
+            "ko_wins": 12,
+            "h_total": 75,
+            "win_rate": 76.2
+        },
+        {
+            "name": "Joseph Benavidez",
+            "wins": 15,
+            "losses": 6,
+            "ko_wins": 5,
+            "h_total": 64,
+            "win_rate": 71.4
+        },
+        {
+            "name": "Yushin Okami",
+            "wins": 14,
+            "losses": 7,
+            "ko_wins": 5,
+            "h_total": 74,
+            "win_rate": 66.7
+        },
+        {
+            "name": "Lyoto Machida",
+            "wins": 14,
+            "losses": 6,
+            "ko_wins": 6,
+            "h_total": 73,
+            "win_rate": 70.0
+        },
+        {
+            "name": "Dennis Siver",
+            "wins": 12,
+            "losses": 8,
+            "ko_wins": 3,
+            "h_total": 66,
+            "win_rate": 60.0
+        },
+        {
+            "name": "Rich Franklin",
+            "wins": 14,
+            "losses": 6,
+            "ko_wins": 9,
+            "h_total": 73,
+            "win_rate": 70.0
+        },
+        {
+            "name": "Evan Dunham",
+            "wins": 11,
+            "losses": 9,
+            "ko_wins": 2,
+            "h_total": 70,
+            "win_rate": 55.0
+        },
+        {
+            "name": "Yves Edwards",
+            "wins": 10,
+            "losses": 10,
+            "ko_wins": 5,
+            "h_total": 69,
+            "win_rate": 50.0
+        },
+        {
+            "name": "Thiago Santos",
+            "wins": 13,
+            "losses": 7,
+            "ko_wins": 11,
+            "h_total": 74,
+            "win_rate": 65.0
+        },
+        {
+            "name": "Sam Stout",
+            "wins": 9,
+            "losses": 11,
+            "ko_wins": 1,
+            "h_total": 69,
+            "win_rate": 45.0
+        },
+        {
+            "name": "Patrick Cote",
+            "wins": 10,
+            "losses": 10,
+            "ko_wins": 4,
+            "h_total": 71,
+            "win_rate": 50.0
+        },
+        {
+            "name": "Alistair Overeem",
+            "wins": 12,
+            "losses": 8,
+            "ko_wins": 9,
+            "h_total": 76,
+            "win_rate": 60.0
+        },
+        {
+            "name": "Ben Saunders",
+            "wins": 9,
+            "losses": 10,
+            "ko_wins": 3,
+            "h_total": 74,
+            "win_rate": 47.4
+        },
+        {
+            "name": "Cole Miller",
+            "wins": 10,
+            "losses": 9,
+            "ko_wins": 1,
+            "h_total": 73,
+            "win_rate": 52.6
+        },
+        {
+            "name": "Glover Teixeira",
+            "wins": 15,
+            "losses": 4,
+            "ko_wins": 6,
+            "h_total": 74,
+            "win_rate": 78.9
+        },
+        {
+            "name": "Cub Swanson",
+            "wins": 12,
+            "losses": 7,
+            "ko_wins": 5,
+            "h_total": 68,
+            "win_rate": 63.2
+        },
+        {
+            "name": "Ryan Bader",
+            "wins": 14,
+            "losses": 5,
+            "ko_wins": 4,
+            "h_total": 74,
+            "win_rate": 73.7
+        },
+        {
+            "name": "Sam Alvey",
+            "wins": 10,
+            "losses": 9,
+            "ko_wins": 5,
+            "h_total": 74,
+            "win_rate": 52.6
+        },
+        {
+            "name": "Chris Camozzi",
+            "wins": 9,
+            "losses": 10,
+            "ko_wins": 2,
+            "h_total": 74,
+            "win_rate": 47.4
+        },
+        {
+            "name": "Chris Lytle",
+            "wins": 10,
+            "losses": 9,
+            "ko_wins": 1,
+            "h_total": 71,
+            "win_rate": 52.6
+        },
+        {
+            "name": "CB Dollaway",
+            "wins": 11,
+            "losses": 8,
+            "ko_wins": 2,
+            "h_total": 74,
+            "win_rate": 57.9
+        },
+        {
+            "name": "Jorge Masvidal",
+            "wins": 12,
+            "losses": 7,
+            "ko_wins": 6,
+            "h_total": 71,
+            "win_rate": 63.2
+        },
+        {
+            "name": "Anthony Pettis",
+            "wins": 11,
+            "losses": 8,
+            "ko_wins": 3,
+            "h_total": 70,
+            "win_rate": 57.9
+        },
+        {
+            "name": "Rick Story",
+            "wins": 12,
+            "losses": 7,
+            "ko_wins": 2,
+            "h_total": 69,
+            "win_rate": 63.2
+        },
+        {
+            "name": "Brad Tavares",
+            "wins": 13,
+            "losses": 6,
+            "ko_wins": 2,
+            "h_total": 73,
+            "win_rate": 68.4
+        },
+        {
+            "name": "Mike Pyle",
+            "wins": 10,
+            "losses": 9,
+            "ko_wins": 5,
+            "h_total": 72,
+            "win_rate": 52.6
+        },
+        {
+            "name": "Alex Oliveira",
+            "wins": 11,
+            "losses": 7,
+            "ko_wins": 4,
+            "h_total": 71,
+            "win_rate": 61.1
+        },
+        {
+            "name": "Joshua Burkman",
+            "wins": 6,
+            "losses": 12,
+            "ko_wins": 1,
+            "h_total": 70,
+            "win_rate": 33.3
+        },
+        {
+            "name": "Beneil Dariush",
+            "wins": 14,
+            "losses": 4,
+            "ko_wins": 3,
+            "h_total": 70,
+            "win_rate": 77.8
+        },
+        {
+            "name": "Gray Maynard",
+            "wins": 11,
+            "losses": 7,
+            "ko_wins": 1,
+            "h_total": 69,
+            "win_rate": 61.1
+        },
+        {
+            "name": "Mauricio Rua",
+            "wins": 10,
+            "losses": 8,
+            "ko_wins": 7,
+            "h_total": 73,
+            "win_rate": 55.6
+        },
+        {
+            "name": "Rashad Evans",
+            "wins": 12,
+            "losses": 6,
+            "ko_wins": 5,
+            "h_total": 72,
+            "win_rate": 66.7
+        },
+        {
+            "name": "Roy Nelson",
+            "wins": 8,
+            "losses": 10,
+            "ko_wins": 7,
+            "h_total": 72,
+            "win_rate": 44.4
+        },
+        {
+            "name": "Angela Hill",
+            "wins": 8,
+            "losses": 10,
+            "ko_wins": 2,
+            "h_total": 63,
+            "win_rate": 44.4
+        },
+        {
+            "name": "Matt Wiman",
+            "wins": 10,
+            "losses": 8,
+            "ko_wins": 2,
+            "h_total": 70,
+            "win_rate": 55.6
+        },
+        {
+            "name": "Carlos Condit",
+            "wins": 8,
+            "losses": 9,
+            "ko_wins": 5,
+            "h_total": 74,
+            "win_rate": 47.1
+        },
+        {
+            "name": "Cheick Kongo",
+            "wins": 11,
+            "losses": 6,
+            "ko_wins": 7,
+            "h_total": 76,
+            "win_rate": 64.7
+        },
+        {
+            "name": "Fabricio Werdum",
+            "wins": 11,
+            "losses": 6,
+            "ko_wins": 3,
+            "h_total": 76,
+            "win_rate": 64.7
+        },
+        {
+            "name": "Dong Hyun Kim",
+            "wins": 13,
+            "losses": 4,
+            "ko_wins": 4,
+            "h_total": 74,
+            "win_rate": 76.5
+        },
+        {
+            "name": "Gian Villante",
+            "wins": 7,
+            "losses": 10,
+            "ko_wins": 4,
+            "h_total": 75,
+            "win_rate": 41.2
+        },
+        {
+            "name": "Spencer Fisher",
+            "wins": 9,
+            "losses": 8,
+            "ko_wins": 3,
+            "h_total": 67,
+            "win_rate": 52.9
+        },
+        {
+            "name": "Martin Kampmann",
+            "wins": 11,
+            "losses": 6,
+            "ko_wins": 2,
+            "h_total": 72,
+            "win_rate": 64.7
+        },
+        {
+            "name": "Randy Couture",
+            "wins": 12,
+            "losses": 5,
+            "ko_wins": 4,
+            "h_total": 73,
+            "win_rate": 70.6
+        },
+        {
+            "name": "Jon Fitch",
+            "wins": 14,
+            "losses": 3,
+            "ko_wins": 1,
+            "h_total": 72,
+            "win_rate": 82.4
+        },
+        {
+            "name": "Anthony Johnson",
+            "wins": 13,
+            "losses": 4,
+            "ko_wins": 11,
+            "h_total": 74,
+            "win_rate": 76.5
+        },
+        {
+            "name": "Stipe Miocic",
+            "wins": 14,
+            "losses": 3,
+            "ko_wins": 9,
+            "h_total": 76,
+            "win_rate": 82.4
+        },
+        {
+            "name": "Urijah Faber",
+            "wins": 11,
+            "losses": 6,
+            "ko_wins": 1,
+            "h_total": 66,
+            "win_rate": 64.7
+        },
+        {
+            "name": "Ricardo Lamas",
+            "wins": 11,
+            "losses": 6,
+            "ko_wins": 4,
+            "h_total": 68,
+            "win_rate": 64.7
+        },
+        {
+            "name": "Iuri Alcantara",
+            "wins": 10,
+            "losses": 7,
+            "ko_wins": 3,
+            "h_total": 69,
+            "win_rate": 58.8
+        },
+        {
+            "name": "John Makdessi",
+            "wins": 10,
+            "losses": 7,
+            "ko_wins": 3,
+            "h_total": 68,
+            "win_rate": 58.8
+        },
+        {
+            "name": "Demetrious Johnson",
+            "wins": 15,
+            "losses": 2,
+            "ko_wins": 2,
+            "h_total": 63,
+            "win_rate": 88.2
+        },
+        {
+            "name": "Thiago Tavares",
+            "wins": 10,
+            "losses": 7,
+            "ko_wins": 1,
+            "h_total": 67,
+            "win_rate": 58.8
+        }
+    ],
+    "task14": {
+        "red_corner": 15,
+        "height_inch": 1.5,
+        "age_prime": 5
+    }
+}

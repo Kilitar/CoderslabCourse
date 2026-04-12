@@ -1,0 +1,167 @@
+location_id	city	region/district	country
+1	Las Vegas	 Nevada	 USA
+2	Los Angeles	 California	 USA
+3	Houston	 Texas	 USA
+4	Fort Campbell	 Kentucky	 USA
+5	Abu Dhabi	 Abu Dhabi	 United Arab Emirates
+6	Sao Paulo	 Sao Paulo	 Brazil
+7	Winnipeg	 Manitoba	 Canada
+8	Chicago	 Illinois	 USA
+9	Newark	 New Jersey	 USA
+10	Tampa	 Florida	 USA
+11	Philadelphia	 Pennsylvania	 USA
+12	Albany	 New York	 USA
+13	Rio de Janeiro	 Rio de Janeiro	 Brazil
+14	Melbourne	 Victoria	 Australia
+15	Norfolk	 Virginia	 USA
+16	Ottawa	 Ontario	 Canada
+17	Boise	 Idaho	 USA
+18	New York City	 New York	 USA
+19	Perth	 Western Australia	 Australia
+20	Zagreb		 Croatia
+21	Phoenix	 Arizona	 USA
+22	Wichita	 Kansas	 USA
+23	Washington	 DC	 USA
+24	Rotterdam	 Zuid-Holland	 Netherlands
+25	Moncton	 New Brunswick	 Canada
+26	Belfast	 Northern Ireland	 United Kingdom
+27	Fairfax	 Virginia	 USA
+28	Macau		 China
+29	Pittsburgh	 Pennsylvania	 USA
+30	Edmonton	 Alberta	 Canada
+31	Brooklyn	 New York	 USA
+32	Rochester	 New York	 USA
+33	Manchester	 England	 United Kingdom
+34	Porto Alegre	 Rio Grande do Sul	 Brazil
+35	Oklahoma City	 Oklahoma	 USA
+36	Atlantic City	 New Jersey	 USA
+37	Fortaleza	 Ceara	 Brazil
+38	Broomfield	 Colorado	 USA
+39	Rio de Janeiro		 Brazil
+40	Tulsa	 Oklahoma	 USA
+41	Moscow	 Moscow	 Russia
+42	Minneapolis	 Minnesota	 USA
+43	Adelaide	 South Australia	 Australia
+44	Brasilia	 Distrito Federal	 Brazil
+45	Atlanta	 Georgia	 USA
+46	Natal	 Rio Grande do Norte	 Brazil
+47	Goiania	 Goias	 Brazil
+48	Gold Coast	 Queensland	 Australia
+49	Orlando	 Florida	 USA
+50	Mexico City	 Distrito Federal	 Mexico
+51	Shenzhen	 Guangdong	 China
+52	Beijing		 China
+53	Saitama	 Saitama	 Japan
+54	Calgary	 Alberta	 Canada
+55	Austin	 Texas	 USA
+56	Sacramento	 California	 USA
+57	Kallang		 Singapore
+58	Buenos Aires	 Buenos Aires	 Argentina
+59	Shanghai	 Hebei	 China
+60	Glasgow	 Scotland	 United Kingdom
+61	Boston	 Massachusetts	 USA
+62	Jacksonville	 Florida	 USA
+63	Anaheim	 California	 USA
+64	Quebec City	 Quebec	 Canada
+65	Toronto	 Ontario	 Canada
+66	Auburn Hills	 Michigan	 USA
+67	Auckland		 New Zealand
+68	Sydney	 New South Wales	 Australia
+69	Hollywood	 Florida	 USA
+70	London	 England	 United Kingdom
+71	Nashville	 Tennessee	 USA
+72	Utica	 New York	 USA
+73	Sioux Falls	 South Dakota	 USA
+74	Denver	 Colorado	 USA
+75	Bangor	 Maine	 USA
+76	Duluth	 Georgia	 USA
+77	Raleigh	 North Carolina	 USA
+78	San Antonio	 Texas	 USA
+79	Fresno	 California	 USA
+80	Vancouver	 British Columbia	 Canada
+81	Barueri	 Sao Paulo	 Brazil
+82	Curitiba	 Parana	 Brazil
+83	San Jose	 California	 USA
+84	Sunrise	 Florida	 USA
+85	Portland	 Oregon	 USA
+86	Stockholm		 Sweden
+87	Saskatoon	 Saskatchewan	 Canada
+88	Hidalgo	 Texas	 USA
+89	Nottingham	 England	 United Kingdom
+90	Oberhausen	 North Rhine-Westphalia	 Germany
+91	Cologne	 North Rhine-Westphalia	 Germany
+92	Montreal	 Quebec	 Canada
+93	Lincoln	 Nebraska	 USA
+94	Cincinnati	 Ohio	 USA
+95	Jaragua do Sul	 Santa Catarina	 Brazil
+96	Seoul		 South Korea
+97	Berlin		 Germany
+98	Dallas	 Texas	 USA
+99	Liverpool	 England	 United Kingdom
+100	Dublin	 Leinster	 Ireland
+101	Brisbane	 Queensland	 Australia
+102	Copenhagen		 Denmark
+103	Gdansk		 Poland
+104	Uberlandia	 Minas Gerais	 Brazil
+105	Halifax	 Nova Scotia	 Canada
+106	Greenville	 South Carolina	 USA
+107	Milwaukee	 Wisconsin	 USA
+108	Hamburg	 Hamburg	 Germany
+109	St. Louis	 Missouri	 USA
+110	Prague		 Czech Republic
+111	Rio Rancho	 New Mexico	 USA
+112	Charlotte	 North Carolina	 USA
+113	Monterrey	 Nuevo Leon	 Mexico
+114	Singapore		 Singapore
+115	Belem	 Para	 Brazil
+116	San Diego	 California	 USA
+117	Saitama		 Japan
+118	Abu Dhabi		 United Arab Emirates
+119	Killeen	 Texas	 USA
+120	Manila		 Philippines
+121	Uniondale	 New York	 USA
+122	Detroit	 Michigan	 USA
+123	Belo Horizonte	 Minas Gerais	 Brazil
+124	Busan		 South Korea
+125	Baltimore	 Maryland	 USA
+126	Albuquerque	 New Mexico	 USA
+127	Glendale	 Arizona	 USA
+128	Seattle	 Washington	 USA
+129	Kansas City	 Missouri	 USA
+130	East Rutherford	 New Jersey	 USA
+131	Saint Petersburg	 Saint Petersburg	 Russia
+132	Montevideo		 Uruguay
+133	Cleveland	 Ohio	 USA
+134	Ledyard	 Connecticut	 USA
+135	Sao Paulo		 Brazil
+136	Berlin	 Berlin	 Germany
+137	Omaha	 Nebraska	 USA
+138	Salt Lake City	 Utah	 USA
+139	Rosemont	 Illinois	 USA
+140	Krakow		 Poland
+141	New Orleans	 Louisiana	 USA
+142	Oakland	 California	 USA
+143	Columbus	 Ohio	 USA
+144	Uncasville	 Connecticut	 USA
+145	Memphis	 Tennessee	 USA
+146	Lake Charles	 Louisiana	 USA
+147	Buffalo	 New York	 USA
+148	Indianapolis	 Indiana	 USA
+149	Louisville	 Kentucky	 USA
+150	Birmingham	 England	 United Kingdom
+151	Santiago		 Chile
+152	Bossier City	 Louisiana	 USA
+153	Newcastle	 England	 United Kingdom
+154	Bay St. Louis	 Mississippi	 USA
+155	Birmingham	 Alabama	 USA
+156	Mobile	 Alabama	 USA
+157	Cedar Rapids	 Iowa	 USA
+158	Miami	 Florida	 USA
+159	Fayetteville	 North Carolina	 USA
+160	Tokyo		 Japan
+161	Augusta	 Georgia	 USA
+162	Yokohama	 Kanagawa	 Japan
+163	Casper	 Wyoming	 USA
+164	Dothan	 Alabama	 USA
+165	San Juan		 Puerto Rico
+166	Chiba		 Japan
