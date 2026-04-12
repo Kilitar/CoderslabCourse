@@ -267,10 +267,31 @@ const App = () => {
          </ResponsiveContainer>
       </Chapter>
 
-      <Chapter id="peak" label="Kapitola 7" question="Kdy přichází vrchol sil?" insight={<p>Bojovník v UFC dosahuje vrcholu mezi <strong>25. a 29. rokem</strong>. V této fázi se potkává fyzická dravost s potřebnou zkušeností (alespoň 5+ zápasů).</p>}>
+      <Chapter id="peak" label="Kapitola 8" question="Kdy přichází vrchol sil?" insight={<p>Bojovník v UFC dosahuje vrcholu mezi <strong>25. a 29. rokem</strong>. V této fázi se potkává fyzická dravost s potřebnou zkušeností (alespoň 5+ zápasů).</p>}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-          <ResponsiveContainer width="100%" height={250}><BarChart data={task10}><XAxis dataKey="group" /><YAxis hide /><Bar dataKey="wins" fill="#e10600" /></BarChart></ResponsiveContainer>
-          <ResponsiveContainer width="100%" height={250}><AreaChart data={task9}><XAxis dataKey="fight_num" /><YAxis hide /><Area dataKey="win_rate" stroke="#0a5cd2" fill="rgba(10, 92, 210, 0.1)" /></AreaChart></ResponsiveContainer>
+          <div>
+             <h4 className="metric-label" style={{marginBottom: '1rem'}}>Úspěšnost podle věku</h4>
+             <ResponsiveContainer width="100%" height={250}>
+                <BarChart data={task10}>
+                   <XAxis dataKey="group" tick={{fill:'#666'}} />
+                   <YAxis hide />
+                   <Tooltip contentStyle={{background:'#111', border:'1px solid #333'}} />
+                   <Bar dataKey="wins" fill="#e10600" radius={[4, 4, 0, 0]} />
+                </BarChart>
+             </ResponsiveContainer>
+          </div>
+          <div>
+             <h4 className="metric-label" style={{marginBottom: '1rem'}}>Vliv zkušeností (Win Rate %)</h4>
+             <ResponsiveContainer width="100%" height={250}>
+                <AreaChart data={task9}>
+                   <CartesianGrid stroke="#222" vertical={false} />
+                   <XAxis dataKey="fight_num" label={{ value: 'Zápasy v kariéře', position: 'insideBottom', offset: -5, fill: '#666', fontSize: 10 }} tick={{fill:'#666'}} />
+                   <YAxis tick={{fill:'#666', fontSize: 10}} unit="%" />
+                   <Tooltip contentStyle={{background:'#111', border:'1px solid #333'}} />
+                   <Area type="monotone" dataKey="win_rate" stroke="#0a5cd2" fill="rgba(10, 92, 210, 0.1)" strokeWidth={3} name="Míra výher" />
+                </AreaChart>
+             </ResponsiveContainer>
+          </div>
         </div>
       </Chapter>
 
