@@ -392,12 +392,35 @@ const App = () => {
                        </div>
                     ))}
                  </div>
-                 {selectedFighter && (
-                    <motion.div initial={{opacity:0}} animate={{opacity:1}} style={{marginTop:'1.5rem', borderTop:'1px solid #333', paddingTop:'1rem'}}>
-                       <p style={{fontSize:'0.9rem'}}><strong>{selectedFighter.name}</strong></p>
-                       <p style={{fontSize:'0.8rem', color:'#8e8e93'}}>Míra výher: {selectedFighter.win_rate}% | Height: {selectedFighter.h_total}"</p>
-                    </motion.div>
-                 )}
+                 {selectedFighter && (() => {
+                    const sortedFighters = [...task13].sort((a,b) => explorerSort === 'activity' ? b.total_fights - a.total_fights : b.wins - a.wins);
+                    const rank = sortedFighters.findIndex(f => f.name === selectedFighter.name) + 1;
+                    return (
+                       <motion.div initial={{opacity:0}} animate={{opacity:1}} style={{marginTop:'1.5rem', borderTop:'1px solid #333', paddingTop:'1rem', display: 'flex', alignItems: 'center', gap: '1.5rem'}}>
+                          <div style={{
+                             width: '50px', 
+                             height: '50px', 
+                             background: 'var(--accent-red)', 
+                             borderRadius: '12px', 
+                             display: 'flex', 
+                             flexDirection: 'column',
+                             alignItems: 'center', 
+                             justifyContent: 'center',
+                             boxShadow: '0 0 15px var(--accent-red-glow)'
+                          }}>
+                             <span style={{fontSize: '0.6rem', fontWeight: 800, opacity: 0.8}}>RANK</span>
+                             <span style={{fontSize: '1.2rem', fontWeight: 800}}>#{rank}</span>
+                          </div>
+                          <div>
+                             <p style={{fontSize:'1rem', fontWeight: 700}}><strong>{selectedFighter.name}</strong></p>
+                             <p style={{fontSize:'0.8rem', color:'#8e8e93'}}>
+                                {explorerSort === 'activity' ? `Nejaktivnější: #${rank} / 200` : `Nejúspěšnější: #${rank} / 200`}
+                             </p>
+                             <p style={{fontSize:'0.75rem', color:'#666', marginTop: '4px'}}>Míra výher: {selectedFighter.win_rate}% | Height: {selectedFighter.h_total}"</p>
+                          </div>
+                       </motion.div>
+                    );
+                 })()}
               </div>
            </div>
         </div>
