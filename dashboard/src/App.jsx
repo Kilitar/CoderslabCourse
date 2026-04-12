@@ -419,7 +419,7 @@ const App = () => {
                              <p style={{fontSize:'0.8rem', color:'#8e8e93'}}>
                                 {explorerSort === 'activity' ? `Nejaktivnější: #${rank} / 200` : `Nejúspěšnější: #${rank} / 200`}
                              </p>
-                             <p style={{fontSize:'0.75rem', color:'#666', marginTop: '4px'}}>Míra výher: {selectedFighter.win_rate}% | Height: {selectedFighter.h_total}"</p>
+                             <p style={{fontSize:'0.75rem', color:'#666', marginTop: '4px'}}>Míra výher: {selectedFighter.win_rate}% | Height: {selectedFighter.h_total}" | KO Skóre: <span style={{color: 'var(--accent-red)'}}>{selectedFighter.ko_wins}</span> : <span style={{color: '#666'}}>{selectedFighter.ko_losses}</span></p>
                           </div>
                        </motion.div>
                     );

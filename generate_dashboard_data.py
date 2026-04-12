@@ -63,19 +63,28 @@ def generate_data():
     fighters_db = []
     for name in top_200_names:
         f_matches = df_fights[(df_fights['r_name'] == name) | (df_fights['b_name'] == name)]
+        wins = 0
+        kos_given = 0
+        kos_received = 0
+        total = len(f_matches)
+        h_total = 0
+        
         # Najdeme nejčastější váhovou kategorii
         weight_classes = f_matches['fight_type_filtered'].value_counts()
         w_class = weight_classes.index[0] if not weight_classes.empty else "N/A"
-        wins = 0
-        kos = 0
-        total = len(f_matches)
-        h_total = 0
+
         for _, m in f_matches.iterrows():
             is_red = m['r_name'] == name
             side = 'r' if is_red else 'b'
-            if (m['winner'] == 'Red' and is_red) or (m['winner'] == 'Blue' and not is_red):
+            is_winner = (m['winner'] == 'Red' and is_red) or (m['winner'] == 'Blue' and not is_red)
+            
+            if is_winner:
                 wins += 1
-                if m['method_simple'] == 'KO/TKO': kos += 1
+                if m['method_simple'] == 'KO/TKO': kos_given += 1
+            else:
+                # Pokud prohrál a bylo to KO/TKO
+                if m['method_simple'] == 'KO/TKO': kos_received += 1
+                
             h_total = m[f'{side}_feet'] * 12 + m[f'{side}_inch']
             
         fighters_db.append({
@@ -83,13 +92,14 @@ def generate_data():
             "wins": wins,
             "losses": total - wins,
             "total_fights": total,
-            "ko_wins": kos,
-            "h_total": int(h_total),
+            "ko_wins": kos_given,
+            "ko_losses": kos_received,
             "weight_class": w_class,
+            "h_total": int(h_total),
             "win_rate": round((wins/total)*100, 1)
         })
     task13 = fighters_db
-
+    
     # --- TASK 9: EXPERIENCE ---
     fighter_hist = {}
     exp_wins = {} 
