@@ -30,7 +30,8 @@ const App = () => {
   const { task1, task2, task3, task4, task5, task6, task7, task8, task9, task10, task11, task12, task13, task14 } = data;
   const [activeChapter, setActiveChapter] = useState('intro');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedFighter, setSelectedFighter] = useState(null);
+  const [selectedFighter, setSelectedFighter] = useState(task13[0]);
+  const [explorerSort, setExplorerSort] = useState('activity');
   
   // Predictor State
   const [predictMode, setPredictMode] = useState('name'); // 'name' or 'attributes'
@@ -252,36 +253,45 @@ const App = () => {
                  </div>
 
                  {predictMode === 'name' ? (
-                   <div style={{display:'flex', gap:'2rem', alignItems: 'center'}}>
-                      <div style={{flex:1}}>
-                         <select value={p1.name} onChange={(e) => setP1(task13.find(f => f.name === e.target.value))} className="custom-select">
-                            {task13.map(f => <option key={f.name} value={f.name}>{f.name}</option>)}
-                         </select>
-                         <p style={{fontSize:'0.8rem', color:'#666', marginTop:'0.5rem'}}>WR: {p1.win_rate}% | Height: {p1.h_total}"</p>
-                      </div>
-                      <div style={{fontSize:'1.5rem', fontWeight:800}}>VS</div>
-                      <div style={{flex:1}}>
-                         <select value={p2.name} onChange={(e) => setP2(task13.find(f => f.name === e.target.value))} className="custom-select">
-                            {task13.map(f => <option key={f.name} value={f.name}>{f.name}</option>)}
-                         </select>
-                         <p style={{fontSize:'0.8rem', color:'#666', marginTop:'0.5rem'}}>WR: {p2.win_rate}% | Height: {p2.h_total}"</p>
-                      </div>
-                   </div>
+                    <div style={{display:'flex', gap:'2rem', alignItems: 'center'}}>
+                       <div style={{flex:1, borderLeft: '4px solid var(--accent-red)', paddingLeft: '1.5rem'}}>
+                          <span style={{fontSize: '0.7rem', color: 'var(--accent-red)', fontWeight: 800, letterSpacing: '2px'}}>RED CORNER</span>
+                          <select value={p1.name} onChange={(e) => setP1(task13.find(f => f.name === e.target.value))} className="custom-select" style={{marginTop:'0.5rem'}}>
+                             {task13.map(f => <option key={f.name} value={f.name}>{f.name}</option>)}
+                          </select>
+                          <p style={{fontSize:'0.8rem', color:'#666', marginTop:'0.5rem'}}>WR: {p1.win_rate}% | Height: {p1.h_total}"</p>
+                       </div>
+                       
+                       <div style={{color:'#444', fontWeight: 800}}>VS</div>
+
+                       <div style={{flex:1, borderRight: '4px solid #0a5cd2', paddingRight: '1.5rem', textAlign: 'right'}}>
+                          <span style={{fontSize: '0.7rem', color: '#0a5cd2', fontWeight: 800, letterSpacing: '2px'}}>BLUE CORNER</span>
+                          <select value={p2.name} onChange={(e) => setP2(task13.find(f => f.name === e.target.value))} className="custom-select" style={{marginTop:'0.5rem', textAlign: 'right'}}>
+                             {task13.map(f => <option key={f.name} value={f.name}>{f.name}</option>)}
+                          </select>
+                          <p style={{fontSize:'0.8rem', color:'#666', marginTop:'0.5rem'}}>WR: {p2.win_rate}% | Height: {p2.h_total}"</p>
+                       </div>
+                    </div>
                  ) : (
-                   <div style={{display:'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap:'2rem'}}>
-                      <div>
-                         <label className="metric-label">Výška P1 (inches)</label>
-                         <input type="range" min="60" max="84" value={attr.p1Height} onChange={(e) => setAttr({...attr, p1Height: e.target.value})} style={{width:'100%'}} />
-                         <label className="metric-label">Věk P1</label>
-                         <input type="range" min="18" max="45" value={attr.p1Age} onChange={(e) => setAttr({...attr, p1Age: e.target.value})} style={{width:'100%'}} />
-                      </div>
-                      <div>
-                         <label className="metric-label">Výška P2 (inches)</label>
-                         <input type="range" min="60" max="84" value={attr.p2Height} onChange={(e) => setAttr({...attr, p2Height: e.target.value})} style={{width:'100%'}} />
-                         <label className="metric-label">Věk P2</label>
-                         <input type="range" min="18" max="45" value={attr.p2Age} onChange={(e) => setAttr({...attr, p2Age: e.target.value})} style={{width:'100%'}} />
-                      </div>
-                   </div>
+                    <div style={{display:'grid', gridTemplateColumns: '1fr auto 1fr', gap:'2rem', alignItems: 'center'}}>
+                       <div style={{borderLeft: '4px solid var(--accent-red)', paddingLeft: '1.5rem'}}>
+                          <span style={{fontSize: '0.7rem', color: 'var(--accent-red)', fontWeight: 800, letterSpacing: '2px'}}>RED CORNER</span>
+                          <label className="metric-label" style={{marginTop: '1rem', display: 'block'}}>Výška P1 (in)</label>
+                          <input type="range" min="60" max="84" value={attr.p1Height} onChange={(e) => setAttr({...attr, p1Height: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
+                          <label className="metric-label">Věk P1</label>
+                          <input type="range" min="18" max="45" value={attr.p1Age} onChange={(e) => setAttr({...attr, p1Age: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
+                       </div>
+
+                       <div style={{color:'#444', fontWeight: 800}}>VS</div>
+
+                       <div style={{borderRight: '4px solid #0a5cd2', paddingRight: '1.5rem', textAlign: 'right'}}>
+                          <span style={{fontSize: '0.7rem', color: '#0a5cd2', fontWeight: 800, letterSpacing: '2px'}}>BLUE CORNER</span>
+                          <label className="metric-label" style={{marginTop: '1rem', display: 'block'}}>Výška P2 (in)</label>
+                          <input type="range" min="60" max="84" value={attr.p2Height} onChange={(e) => setAttr({...attr, p2Height: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
+                          <label className="metric-label">Věk P2</label>
+                          <input type="range" min="18" max="45" value={attr.p2Age} onChange={(e) => setAttr({...attr, p2Age: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
+                       </div>
+                    </div>
                  )}
 
                  <div style={{marginTop: '3rem', textAlign: 'center'}}>
@@ -295,7 +305,13 @@ const App = () => {
 
               {/* Fighter Search */}
               <div className="card" style={{gridColumn: 'span 5', padding: '2rem'}}>
-                 <h3 className="chart-title"><Search size={20} /> Fighter Explorer (Top 100)</h3>
+                 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom: '2rem'}}>
+                    <h3 className="chart-title"><Search size={20} /> Fighter Explorer (Top 200)</h3>
+                    <div className="toggle-group" style={{transform: 'scale(0.8)', transformOrigin: 'right'}}>
+                       <button onClick={() => setExplorerSort('activity')} className={explorerSort === 'activity' ? 'active' : ''}>Aktivita</button>
+                       <button onClick={() => setExplorerSort('success')} className={explorerSort === 'success' ? 'active' : ''}>Úspěch</button>
+                    </div>
+                 </div>
                  <div style={{position:'relative', marginBottom: '2rem'}}>
                     <input 
                       type="text" 
@@ -306,7 +322,9 @@ const App = () => {
                     />
                  </div>
                  <div style={{maxHeight: '350px', overflowY: 'auto'}}>
-                    {task13.filter(f => f.name.toLowerCase().includes(searchTerm.toLowerCase())).map(f => (
+                    {[...task13]
+                       .sort((a,b) => explorerSort === 'activity' ? b.total_fights - a.total_fights : b.wins - a.wins)
+                       .filter(f => f.name.toLowerCase().includes(searchTerm.toLowerCase())).map(f => (
                        <div key={f.name} className={`fighter-item ${selectedFighter?.name === f.name ? 'active' : ''}`} onClick={() => setSelectedFighter(f)}>
                           <span>{f.name}</span>
                           <span style={{fontSize:'0.7rem', color:'#666'}}>{f.wins}W - {f.losses}L</span>
