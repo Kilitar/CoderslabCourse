@@ -311,20 +311,34 @@ const App = () => {
                        <div style={{display:'grid', gridTemplateColumns: '1fr auto 1fr', gap:'2rem', alignItems: 'center'}}>
                           <div style={{borderLeft: '4px solid var(--accent-red)', paddingLeft: '1.5rem'}}>
                              <span style={{fontSize: '0.7rem', color: 'var(--accent-red)', fontWeight: 800, letterSpacing: '2px'}}>RED CORNER</span>
-                             <label className="metric-label" style={{marginTop: '1rem', display: 'block'}}>Výška P1 (in)</label>
-                             <input type="range" min="60" max="84" value={attr.p1Height} onChange={(e) => setAttr({...attr, p1Height: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
+                          <div style={{display:'flex', justifyContent:'space-between', marginTop: '1rem'}}>
+                             <label className="metric-label">Výška P1</label>
+                             <span style={{fontSize:'0.8rem', color:'var(--accent-red)'}}>{attr.p1Height}" ({Math.round(attr.p1Height * 2.54)} cm)</span>
+                          </div>
+                          <input type="range" min="60" max="84" value={attr.p1Height} onChange={(e) => setAttr({...attr, p1Height: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
+                          
+                          <div style={{display:'flex', justifyContent:'space-between', marginTop: '0.5rem'}}>
                              <label className="metric-label">Věk P1</label>
-                             <input type="range" min="18" max="45" value={attr.p1Age} onChange={(e) => setAttr({...attr, p1Age: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
+                             <span style={{fontSize:'0.8rem', color:'var(--accent-red)'}}>{attr.p1Age} let</span>
+                          </div>
+                          <input type="range" min="18" max="45" value={attr.p1Age} onChange={(e) => setAttr({...attr, p1Age: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
                           </div>
 
                           <div style={{color:'#444', fontWeight: 800}}>VS</div>
 
                           <div style={{borderRight: '4px solid #0a5cd2', paddingRight: '1.5rem', textAlign: 'right'}}>
                              <span style={{fontSize: '0.7rem', color: '#0a5cd2', fontWeight: 800, letterSpacing: '2px'}}>BLUE CORNER</span>
-                             <label className="metric-label" style={{marginTop: '1rem', display: 'block'}}>Výška P2 (in)</label>
-                             <input type="range" min="60" max="84" value={attr.p2Height} onChange={(e) => setAttr({...attr, p2Height: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
+                          <div style={{display:'flex', justifyContent:'space-between', marginTop: '1rem', flexDirection: 'row-reverse'}}>
+                             <label className="metric-label">Výška P2</label>
+                             <span style={{fontSize:'0.8rem', color:'#0a5cd2'}}>{attr.p2Height}" ({Math.round(attr.p2Height * 2.54)} cm)</span>
+                          </div>
+                          <input type="range" min="60" max="84" value={attr.p2Height} onChange={(e) => setAttr({...attr, p2Height: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
+                          
+                          <div style={{display:'flex', justifyContent:'space-between', marginTop: '0.5rem', flexDirection: 'row-reverse'}}>
                              <label className="metric-label">Věk P2</label>
-                             <input type="range" min="18" max="45" value={attr.p2Age} onChange={(e) => setAttr({...attr, p2Age: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
+                             <span style={{fontSize:'0.8rem', color:'#0a5cd2'}}>{attr.p2Age} let</span>
+                          </div>
+                          <input type="range" min="18" max="45" value={attr.p2Age} onChange={(e) => setAttr({...attr, p2Age: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
                           </div>
                        </div>
                     )}
