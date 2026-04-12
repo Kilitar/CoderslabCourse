@@ -58,11 +58,14 @@ def generate_data():
         countries_per_year.append({"year": int(yr), "countries": len(seen_countries)})
     task12 = {"timeline": countries_per_year, "top_countries": geo_df['country'].value_counts().head(10).to_dict()}
 
-    # --- TASK 13: FIGHTER DB (TOP 100) ---
-    top_100_names = pd.concat([df_fights['r_name'], df_fights['b_name']]).value_counts().head(100).index.tolist()
+    # --- TASK 13: FIGHTER DB (TOP 200) ---
+    top_200_names = pd.concat([df_fights['r_name'], df_fights['b_name']]).value_counts().head(200).index.tolist()
     fighters_db = []
-    for name in top_100_names:
+    for name in top_200_names:
         f_matches = df_fights[(df_fights['r_name'] == name) | (df_fights['b_name'] == name)]
+        # Najdeme nejčastější váhovou kategorii
+        weight_classes = f_matches['fight_type_filtered'].value_counts()
+        w_class = weight_classes.index[0] if not weight_classes.empty else "N/A"
         wins = 0
         kos = 0
         total = len(f_matches)
@@ -79,8 +82,10 @@ def generate_data():
             "name": name,
             "wins": wins,
             "losses": total - wins,
+            "total_fights": total,
             "ko_wins": kos,
             "h_total": int(h_total),
+            "weight_class": w_class,
             "win_rate": round((wins/total)*100, 1)
         })
     task13 = fighters_db

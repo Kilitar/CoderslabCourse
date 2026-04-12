@@ -412,7 +412,10 @@ const App = () => {
                              <span style={{fontSize: '1.2rem', fontWeight: 800}}>#{rank}</span>
                           </div>
                           <div>
-                             <p style={{fontSize:'1rem', fontWeight: 700}}><strong>{selectedFighter.name}</strong></p>
+                             <p style={{fontSize:'1rem', fontWeight: 700}}>
+                                <strong>{selectedFighter.name}</strong> 
+                                <span style={{fontSize: '0.8rem', color: 'var(--accent-red)', marginLeft: '8px', opacity: 0.8}}>({selectedFighter.weight_class})</span>
+                             </p>
                              <p style={{fontSize:'0.8rem', color:'#8e8e93'}}>
                                 {explorerSort === 'activity' ? `Nejaktivnější: #${rank} / 200` : `Nejúspěšnější: #${rank} / 200`}
                              </p>
