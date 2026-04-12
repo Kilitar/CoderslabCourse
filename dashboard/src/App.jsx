@@ -1,15 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, 
   PieChart, Pie, Cell, Legend, LineChart, Line, AreaChart, Area, 
   CartesianGrid, ScatterChart, Scatter, ZAxis
 } from 'recharts';
-import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useSpring, AnimatePresence, animate } from 'framer-motion';
 import { 
   Shield, Ruler, History, Zap, UserCheck, Trophy, Target, Users, MapPin, Activity, Calendar, Search, BrainCircuit, Globe
 } from 'lucide-react';
 import data from './data.json';
 import './index.css';
+
+// --- ANIMATED COUNTER COMPONENT ---
+const AnimatedCounter = ({ value, duration = 1, color }) => {
+  const [displayValue, setDisplayValue] = useState(0);
+  
+  useEffect(() => {
+    const controls = animate(0, value, {
+      duration: duration,
+      onUpdate: (latest) => setDisplayValue(Math.round(latest))
+    });
+    return () => controls.stop();
+  }, [value, duration]);
+
+  return <motion.span style={{ color }}>{displayValue}</motion.span>;
+};
 
 const COLORS = ['#e10600', '#b80500', '#900400', '#680300', '#400200'];
 
@@ -115,17 +130,17 @@ const App = () => {
         <div className="hero-overlay" />
         <div className="hero-content">
           <motion.img 
-            initial={{ scale: 0.8, opacity: 0 }} 
-            animate={{ scale: 1, opacity: 1 }} 
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            src="/logo.png" 
-            alt="UFC Logo" 
-            className="hero-logo" 
+              initial={{ scale: 0.8, opacity: 0 }} 
+              animate={{ scale: 1, opacity: 1 }} 
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              src="/logo.png" 
+              alt="UFC Logo" 
+              className="hero-logo" 
           />
           <motion.div 
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
           >
             <h1 className="hero-title">UMĚNÍ DAT V OKTAGONU</h1>
             <p className="hero-subtitle">Komplexní analýza historie, trendů a úspěchu v UFC</p>
@@ -243,62 +258,82 @@ const App = () => {
            
            <div className="chart-grid">
               {/* Predictor */}
-              <div className="card" style={{gridColumn: 'span 7', padding: '2rem'}}>
-                 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom: '2rem'}}>
-                    <h3 className="chart-title"><BrainCircuit size={20} /> Winner Predictor</h3>
+              <div className={`card ${prob !== 50 ? 'heartbeat-subtle' : ''}`} style={{gridColumn: 'span 7', padding: '2rem', position: 'relative', overflow: 'hidden'}}>
+                 
+                 {/* Ongoing Fight Scanner Effect */}
+                 <div className="ongoing-fight-scanner" style={{ '--active-color': prob > 50 ? 'var(--accent-red)' : '#0a5cd2' }} />
+
+                 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom: '2rem', position: 'relative', zIndex: 10}}>
+                    <h3 className="chart-title" style={{display:'flex', alignItems:'center', gap:'0.5rem'}}>
+                       <BrainCircuit size={20} /> Winner Predictor 
+                       {prob !== 50 && <Activity size={16} className="heartbeat" color={prob > 50 ? 'var(--accent-red)' : '#0a5cd2'} />}
+                    </h3>
                     <div className="toggle-group">
                        <button onClick={() => setPredictMode('name')} className={predictMode === 'name' ? 'active' : ''}>Jména</button>
                        <button onClick={() => setPredictMode('attributes')} className={predictMode === 'attributes' ? 'active' : ''}>Atributy</button>
                     </div>
                  </div>
 
-                 {predictMode === 'name' ? (
-                    <div style={{display:'flex', gap:'2rem', alignItems: 'center'}}>
-                       <div style={{flex:1, borderLeft: '4px solid var(--accent-red)', paddingLeft: '1.5rem'}}>
-                          <span style={{fontSize: '0.7rem', color: 'var(--accent-red)', fontWeight: 800, letterSpacing: '2px'}}>RED CORNER</span>
-                          <select value={p1.name} onChange={(e) => setP1(task13.find(f => f.name === e.target.value))} className="custom-select" style={{marginTop:'0.5rem'}}>
-                             {task13.map(f => <option key={f.name} value={f.name}>{f.name}</option>)}
-                          </select>
-                          <p style={{fontSize:'0.8rem', color:'#666', marginTop:'0.5rem'}}>WR: {p1.win_rate}% | Height: {p1.h_total}"</p>
-                       </div>
-                       
-                       <div style={{color:'#444', fontWeight: 800}}>VS</div>
+                 <div style={{position: 'relative', zIndex: 10}}>
+                    {predictMode === 'name' ? (
+                       <div style={{display:'flex', gap:'2rem', alignItems: 'center'}}>
+                          <div style={{flex:1, borderLeft: '4px solid var(--accent-red)', paddingLeft: '1.5rem'}}>
+                             <span style={{fontSize: '0.7rem', color: 'var(--accent-red)', fontWeight: 800, letterSpacing: '2px'}}>RED CORNER</span>
+                             <select value={p1.name} onChange={(e) => setP1(task13.find(f => f.name === e.target.value))} className="custom-select" style={{marginTop:'0.5rem'}}>
+                                {task13.map(f => <option key={f.name} value={f.name}>{f.name}</option>)}
+                             </select>
+                             <p style={{fontSize:'0.8rem', color:'#666', marginTop:'0.5rem'}}>WR: {p1.win_rate}% | Height: {p1.h_total}"</p>
+                          </div>
+                          
+                          <div style={{color:'#444', fontWeight: 800}}>VS</div>
 
-                       <div style={{flex:1, borderRight: '4px solid #0a5cd2', paddingRight: '1.5rem', textAlign: 'right'}}>
-                          <span style={{fontSize: '0.7rem', color: '#0a5cd2', fontWeight: 800, letterSpacing: '2px'}}>BLUE CORNER</span>
-                          <select value={p2.name} onChange={(e) => setP2(task13.find(f => f.name === e.target.value))} className="custom-select" style={{marginTop:'0.5rem', textAlign: 'right'}}>
-                             {task13.map(f => <option key={f.name} value={f.name}>{f.name}</option>)}
-                          </select>
-                          <p style={{fontSize:'0.8rem', color:'#666', marginTop:'0.5rem'}}>WR: {p2.win_rate}% | Height: {p2.h_total}"</p>
+                          <div style={{flex:1, borderRight: '4px solid #0a5cd2', paddingRight: '1.5rem', textAlign: 'right'}}>
+                             <span style={{fontSize: '0.7rem', color: '#0a5cd2', fontWeight: 800, letterSpacing: '2px'}}>BLUE CORNER</span>
+                             <select value={p2.name} onChange={(e) => setP2(task13.find(f => f.name === e.target.value))} className="custom-select" style={{marginTop:'0.5rem', textAlign: 'right'}}>
+                                {task13.map(f => <option key={f.name} value={f.name}>{f.name}</option>)}
+                             </select>
+                             <p style={{fontSize:'0.8rem', color:'#666', marginTop:'0.5rem'}}>WR: {p2.win_rate}% | Height: {p2.h_total}"</p>
+                          </div>
                        </div>
+                    ) : (
+                       <div style={{display:'grid', gridTemplateColumns: '1fr auto 1fr', gap:'2rem', alignItems: 'center'}}>
+                          <div style={{borderLeft: '4px solid var(--accent-red)', paddingLeft: '1.5rem'}}>
+                             <span style={{fontSize: '0.7rem', color: 'var(--accent-red)', fontWeight: 800, letterSpacing: '2px'}}>RED CORNER</span>
+                             <label className="metric-label" style={{marginTop: '1rem', display: 'block'}}>Výška P1 (in)</label>
+                             <input type="range" min="60" max="84" value={attr.p1Height} onChange={(e) => setAttr({...attr, p1Height: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
+                             <label className="metric-label">Věk P1</label>
+                             <input type="range" min="18" max="45" value={attr.p1Age} onChange={(e) => setAttr({...attr, p1Age: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
+                          </div>
+
+                          <div style={{color:'#444', fontWeight: 800}}>VS</div>
+
+                          <div style={{borderRight: '4px solid #0a5cd2', paddingRight: '1.5rem', textAlign: 'right'}}>
+                             <span style={{fontSize: '0.7rem', color: '#0a5cd2', fontWeight: 800, letterSpacing: '2px'}}>BLUE CORNER</span>
+                             <label className="metric-label" style={{marginTop: '1rem', display: 'block'}}>Výška P2 (in)</label>
+                             <input type="range" min="60" max="84" value={attr.p2Height} onChange={(e) => setAttr({...attr, p2Height: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
+                             <label className="metric-label">Věk P2</label>
+                             <input type="range" min="18" max="45" value={attr.p2Age} onChange={(e) => setAttr({...attr, p2Age: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
+                          </div>
+                       </div>
+                    )}
+                 </div>
+
+                 <div style={{marginTop: '3.5rem', textAlign: 'center', position: 'relative', zIndex: 10}}>
+                    <div style={{fontSize: '0.8rem', textTransform: 'uppercase', color: '#666', letterSpacing: '2px'}}>
+                       {prob > 50 ? 'Pravděpodobnost výhry RED' : prob < 50 ? 'Pravděpodobnost výhry BLUE' : 'Vyrovnané šance'}
                     </div>
-                 ) : (
-                    <div style={{display:'grid', gridTemplateColumns: '1fr auto 1fr', gap:'2rem', alignItems: 'center'}}>
-                       <div style={{borderLeft: '4px solid var(--accent-red)', paddingLeft: '1.5rem'}}>
-                          <span style={{fontSize: '0.7rem', color: 'var(--accent-red)', fontWeight: 800, letterSpacing: '2px'}}>RED CORNER</span>
-                          <label className="metric-label" style={{marginTop: '1rem', display: 'block'}}>Výška P1 (in)</label>
-                          <input type="range" min="60" max="84" value={attr.p1Height} onChange={(e) => setAttr({...attr, p1Height: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
-                          <label className="metric-label">Věk P1</label>
-                          <input type="range" min="18" max="45" value={attr.p1Age} onChange={(e) => setAttr({...attr, p1Age: e.target.value})} style={{width:'100%', accentColor: 'var(--accent-red)'}} />
-                       </div>
-
-                       <div style={{color:'#444', fontWeight: 800}}>VS</div>
-
-                       <div style={{borderRight: '4px solid #0a5cd2', paddingRight: '1.5rem', textAlign: 'right'}}>
-                          <span style={{fontSize: '0.7rem', color: '#0a5cd2', fontWeight: 800, letterSpacing: '2px'}}>BLUE CORNER</span>
-                          <label className="metric-label" style={{marginTop: '1rem', display: 'block'}}>Výška P2 (in)</label>
-                          <input type="range" min="60" max="84" value={attr.p2Height} onChange={(e) => setAttr({...attr, p2Height: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
-                          <label className="metric-label">Věk P2</label>
-                          <input type="range" min="18" max="45" value={attr.p2Age} onChange={(e) => setAttr({...attr, p2Age: e.target.value})} style={{width:'100%', accentColor: '#0a5cd2'}} />
-                       </div>
+                    <div style={{fontSize: '5rem', fontWeight: 800, transition: 'color 0.5s ease', color: prob > 50 ? 'var(--accent-red)' : prob < 50 ? '#0a5cd2' : '#fff'}}>
+                       <AnimatedCounter value={prob > 50 ? prob : 100 - prob} color="inherit" />%
                     </div>
-                 )}
-
-                 <div style={{marginTop: '3rem', textAlign: 'center'}}>
-                    <div style={{fontSize: '0.8rem', textTransform: 'uppercase', color: '#666'}}>Pravděpodobnost výhry P1</div>
-                    <div style={{fontSize: '4rem', fontWeight: 800, color: '#e10600'}}>{prob}%</div>
-                    <div style={{width: '100%', height: '12px', background: '#222', borderRadius: '6px', overflow: 'hidden', marginTop: '1rem'}}>
-                       <motion.div animate={{ width: `${prob}%` }} style={{height: '100%', background: 'linear-gradient(to right, #e10600, #ff4d4d)'}} />
+                    <div style={{width: '100%', height: '16px', background: '#222', borderRadius: '8px', overflow: 'hidden', marginTop: '1rem', border: '1px solid #333'}}>
+                       <motion.div 
+                         animate={{ 
+                           width: `${prob}%`,
+                           background: prob > 50 ? 'var(--accent-red)' : '#0a5cd2'
+                         }} 
+                         transition={{ duration: 1 }}
+                         style={{height: '100%'}} 
+                       />
                     </div>
                  </div>
               </div>
